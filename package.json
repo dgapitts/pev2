@@ -1,0 +1,14 @@
+{
+  "name": "pev2",
+  "version": "0.1.20",
+  "description": "A VueJS component to show a graphical vizualization of a PostgreSQL execution plan.",
+  "main": "index.html",
+  "repository": "git@github.com:dgapitts/pev2.git",
+  "author": "Pierre GIRAUD <pierre.giraud@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy": "aws s3 sync ./public s3://pev2.ebabel.eu --acl public-read --exclude '*.DS_Store*'",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E3EGZABZ7I8T0L --paths \"/*\""
+  }
+}
